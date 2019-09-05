@@ -12,7 +12,7 @@ spec:
         io.kompose.service: edgex-core-consul
     spec:
       containers:
-      - image: edgexfoundry/docker-core-consul:latest
+      - image: akozyrev/edgex-core-consul:latest
         name: edgex-core-consul
         ports:
         - containerPort: 8400
