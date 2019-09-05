@@ -17,6 +17,7 @@ function create_services {
   kubectl create -f "${EDGEX_ROOT}/services/export-client-service.yaml"
   kubectl create -f "${EDGEX_ROOT}/services/export-distro-service.yaml"
   kubectl create -f "${EDGEX_ROOT}/services/rulesengine-service.yaml"
+  kubectl create -f "${EDGEX_ROOT}/services/device-random-service.yaml"
 }
 
 function create_deployments {
@@ -42,6 +43,8 @@ function create_deployments {
   kubectl create -f "${EDGEX_ROOT}/deployments/export-distro-deployment.yaml"
   sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/rulesengine-deployment.yaml"
+  sleep 10
+  kubectl create -f "${EDGEX_ROOT}/services/device-random-deployment.yaml"
 }
 
 echo "Creating EdgeX services now!"
