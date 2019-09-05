@@ -6,6 +6,7 @@ EDGEX_ROOT=$(dirname "${BASH_SOURCE}")/..
 
 function delete_services {
 
+  kubectl delete -f "${EDGEX_ROOT}/services/device-random-service.yaml"
   kubectl delete -f "${EDGEX_ROOT}/services/consul-service.yaml"
   kubectl delete -f "${EDGEX_ROOT}/services/rulesengine-service.yaml"
   kubectl delete -f "${EDGEX_ROOT}/services/export-distro-service.yaml"
@@ -21,6 +22,8 @@ function delete_services {
 
 function delete_deployments {
 
+  kubectl delete -f "${EDGEX_ROOT}/services/device-random-deployment.yaml"
+  sleep 10
   kubectl delete -f "${EDGEX_ROOT}/deployments/consul-deployment.yaml"
   sleep 10
   kubectl delete -f "${EDGEX_ROOT}/deployments/rulesengine-deployment.yaml"
