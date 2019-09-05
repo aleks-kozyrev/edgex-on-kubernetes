@@ -22,7 +22,7 @@ function delete_services {
 
 function delete_deployments {
 
-  kubectl delete -f "${EDGEX_ROOT}/services/device-random-deployment.yaml"
+  kubectl delete -f "${EDGEX_ROOT}/deployments/device-random-deployment.yaml"
   sleep 10
   kubectl delete -f "${EDGEX_ROOT}/deployments/consul-deployment.yaml"
   sleep 10
