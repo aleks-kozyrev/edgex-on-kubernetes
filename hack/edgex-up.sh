@@ -44,7 +44,7 @@ function create_deployments {
   sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/rulesengine-deployment.yaml"
   sleep 10
-  kubectl create -f "${EDGEX_ROOT}/services/device-random-deployment.yaml"
+  kubectl create -f "${EDGEX_ROOT}/deployments/device-random-deployment.yaml"
 }
 
 echo "Creating EdgeX services now!"
