@@ -26,35 +26,35 @@ function create_services {
 function create_deployments {
 
   kubectl create -f "${EDGEX_ROOT}/deployments/files-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/consul-deployment.yaml"
   sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/config-seed-deployment.yaml"
+  sleep 15
+  kubectl delete -f "${EDGEX_ROOT}/deployments/config-seed-deployment.yaml"
   sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/mongo-deployment.yaml"
-  sleep 3
-  kubectl delete -f "${EDGEX_ROOT}/deployments/config-seed-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/logging-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/notifications-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/metadata-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/data-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/command-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/scheduler-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/export-client-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/export-distro-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/rulesengine-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/device-virtual-deployment.yaml"
-  sleep 3
+  sleep 10
   kubectl create -f "${EDGEX_ROOT}/deployments/device-random-deployment.yaml"
 }
 
