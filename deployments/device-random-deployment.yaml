@@ -13,7 +13,7 @@ spec:
         io.kompose.service: edgex-device-random
     spec:
       containers:
-      - image: edgexfoundry/docker-device-random-go:1.0.0
+      - image: edgexfoundry/docker-device-random-go:0.7.1
         name: edgex-device-random
         ports:
         - containerPort: 49988
