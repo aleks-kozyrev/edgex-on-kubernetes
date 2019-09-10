@@ -14,6 +14,13 @@ spec:
       containers:
       - image: edgexfoundry/docker-export-client-go:0.7.1
         name: edgex-export-client
+        env:
+        - name: EXPORT_CLIENT_MONGO_URL
+          value: edgex-mongo
+        - name: EXPORT_CLIENT_DISTRO_HOST
+          value: edgex-distro
+        - name: EXPORT_CLIENT_CONSUL_HOST
+          value: edgex-config-seed
         ports:
         - containerPort: 48071
         resources: {}
