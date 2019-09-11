@@ -2,8 +2,8 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: edgex-device-random
-  name: edgex-device-random
+    io.kompose.service: device-random
+  name: device-random
 spec:
   replicas: 1
   template:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - image: edgexfoundry/docker-device-random-go:0.7.1
-        name: edgex-device-random
+        name: device-random
         ports:
         - containerPort: 49988
         resources: {}
