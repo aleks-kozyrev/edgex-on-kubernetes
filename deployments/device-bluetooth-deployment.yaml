@@ -13,7 +13,7 @@ spec:
         io.kompose.service: edgex-device-bluetooth
     spec:
       containers:
-      - image: edgexfoundry/docker-device-bluetooth-go:0.7.1
+      - image: edgexfoundry/docker-device-bluetooth:0.6.0
         name: edgex-device-bluetooth
         ports:
         - containerPort: 49988
