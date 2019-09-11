@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    io.kompose.service: edgex-device-random
-  name: edgex-device-random
+    io.kompose.service: device-random
+  name: device-random
 spec:
   ports:
   - name: "49988"
     port: 49988
     targetPort: 49988
   selector:
-    io.kompose.service: edgex-device-random
+    io.kompose.service: device-random
 status:
   loadBalancer: {}
